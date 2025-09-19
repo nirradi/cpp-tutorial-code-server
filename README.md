@@ -30,43 +30,39 @@ Once these prerequisites are ready, you can provision the VM and start coding.
 ```bash
 git clone git@github.com:YOURUSERNAME/cpp-tutorial-code-serve.git
 cd cpp-tutorial-code-serve
-
+```
 
 Initialize Terraform
+```bash
 terraform init
-
-3. Apply configuration
 terraform apply
-
+```
 
 Terraform will create a VM and firewall rules.
 
 Wait for the startup script to finish installing packages.
 
-4. Connect via SSH
+Connect via SSH
+```bash
 ssh -L 8080:localhost:8080 your-username@your-vm-ip
-
+```
 Add code-server authentication
 
 code-server supports a password or token-based login.
-
 You can set this in ~/.config/code-server/config.yaml:
 
+```bash
 auth: password
 password: "some-strong-password"
-
+```
 
 Combined with SSH tunneling, that’s already double protection.
-
-Replace YOURUSER and VM_EXTERNAL_IP accordingly.
 
 5. Access code-server
 
 Open a browser and go to:
 
 http://127.0.0.1:8080
-
-
 Use the password defined in the startup script.
 
 
