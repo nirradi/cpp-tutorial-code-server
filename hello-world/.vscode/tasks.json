@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build hello with clang",
+			"type": "shell",
+			"command": "clang++",
+			"args": [
+				"hello.cpp",
+				"-g",
+				"-o",
+				"hello"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			]
+		}
+	]
+}
